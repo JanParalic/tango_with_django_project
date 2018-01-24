@@ -3,3 +3,4 @@ db.sqlite3
 
 # Machine specific files
 *.pyc
+__pycache__
