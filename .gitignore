@@ -1,0 +1,5 @@
+# DB suite
+db.sqlite3
+
+# Machine specific files
+*.pyc
