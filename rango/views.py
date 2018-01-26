@@ -6,7 +6,9 @@ from rango.models import Page
 def index(request):
     # Construct a dictionary to pass to the template engine as its context.
     category_list = Category.objects.order_by('-likes')[:5]
-    context_dict = {'categories': category_list}
+    page_list = Page.objects.order_by('-views')[:5]
+    context_dict = {'categories': category_list,
+                    'pages' : page_list}
 
     # Return a rendered response to send to the client.
     return render(request, 'rango/index.html', context_dict)
